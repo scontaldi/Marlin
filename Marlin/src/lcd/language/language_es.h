@@ -120,7 +120,7 @@ namespace Language_es {
   LSTR MSG_M48_DEVIATION                  = _UxGT("Desviación");
   LSTR MSG_IDEX_MENU                      = _UxGT("Modo IDEX");
   LSTR MSG_OFFSETS_MENU                   = _UxGT("Desfase Herramienta");
-  LSTR MSG_IDEX_MODE_AUTOPARK             = _UxGT("Auto-Aparcado");
+  LSTR MSG_IDEX_MODE_AUTOPARK             = _UxGT("Auto-Estacionado");
   LSTR MSG_IDEX_MODE_DUPLICATE            = _UxGT("Duplicar");
   LSTR MSG_IDEX_MODE_MIRRORED_COPY        = _UxGT("Copia Reflejada");
   LSTR MSG_IDEX_MODE_FULL_CTRL            = _UxGT("Control Total");
@@ -240,7 +240,7 @@ namespace Language_es {
   LSTR MSG_BED_Z                          = _UxGT("Cama Z");
   LSTR MSG_NOZZLE                         = _UxGT("Boquilla");
   LSTR MSG_NOZZLE_N                       = _UxGT("Boquilla ~");
-  LSTR MSG_NOZZLE_PARKED                  = _UxGT("Boquilla Aparcada");
+  LSTR MSG_NOZZLE_PARKED                  = _UxGT("Boquilla Estacionada");
   LSTR MSG_NOZZLE_STANDBY                 = _UxGT("Boquilla en Espera");
   LSTR MSG_BED                            = _UxGT("Cama");
   LSTR MSG_CHAMBER                        = _UxGT("Recinto");
@@ -552,7 +552,7 @@ namespace Language_es {
 
   #if LCD_HEIGHT >= 4
     LSTR MSG_ADVANCED_PAUSE_WAITING       = _UxGT(MSG_2_LINE("Pulsar el botón para", "reanudar impresión"));
-    LSTR MSG_PAUSE_PRINT_PARKING          = _UxGT(MSG_1_LINE("Aparcando..."));
+    LSTR MSG_PAUSE_PRINT_PARKING          = _UxGT(MSG_1_LINE("Estacionando..."));
     LSTR MSG_FILAMENT_CHANGE_INIT         = _UxGT(MSG_3_LINE("Esperando para", "iniciar el cambio", "de filamento"));
     LSTR MSG_FILAMENT_CHANGE_INSERT       = _UxGT(MSG_3_LINE("Inserte el filamento", "y pulse el botón", "para continuar..."));
     LSTR MSG_FILAMENT_CHANGE_HEAT         = _UxGT(MSG_2_LINE("Pulse el botón para", "calentar la boquilla"));
@@ -564,7 +564,7 @@ namespace Language_es {
     LSTR MSG_FILAMENT_CHANGE_RESUME       = _UxGT(MSG_2_LINE("Esperando impresora", "para reanudar..."));
   #else
     LSTR MSG_ADVANCED_PAUSE_WAITING       = _UxGT(MSG_1_LINE("Pulse para continuar"));
-    LSTR MSG_PAUSE_PRINT_PARKING          = _UxGT(MSG_1_LINE("Aparcando..."));
+    LSTR MSG_PAUSE_PRINT_PARKING          = _UxGT(MSG_1_LINE("Estacionando..."));
     LSTR MSG_FILAMENT_CHANGE_INIT         = _UxGT(MSG_1_LINE("Por Favor espere..."));
     LSTR MSG_FILAMENT_CHANGE_INSERT       = _UxGT(MSG_1_LINE("Inserte y Pulse"));
     LSTR MSG_FILAMENT_CHANGE_HEAT         = _UxGT(MSG_1_LINE("Pulse para Calentar"));
@@ -592,4 +592,13 @@ namespace Language_es {
   LSTR MSG_HEATER_TIMEOUT                 = _UxGT("T. de esp. Calent.");
   LSTR MSG_REHEAT                         = _UxGT("Recalentar");
   LSTR MSG_REHEATING                      = _UxGT("Recalentando...");
+  LSTR MSG_INVERT_STEPPERS                = _UxGT("Invertir Motores");
+  LSTR MSG_INVERT_X                       = _UxGT("Invertir en X");
+  LSTR MSG_INVERT_Y                       = _UxGT("Invertir en Y");
+  LSTR MSG_INVERT_Z                       = _UxGT("Invertir en Z");
+
+  LSTR MSG_PROBE_WIZARD                   = _UxGT("Calibrar Sensor");
+  LSTR MSG_PROBE_WIZARD_PROBING           = _UxGT("Probing Z Reference");
+  LSTR MSG_PROBE_WIZARD_MOVING            = _UxGT("Moviendo Extrusor");
+  LSTR MSG_MOVE_NOZZLE_TO_BED             = _UxGT("Mover boquilla");
 }
