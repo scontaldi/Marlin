@@ -85,9 +85,11 @@
   #ifndef X_MIN_PIN
     #define X_MIN_PIN                          3
   #endif
-  #ifndef X_MAX_PIN
-    #define X_MAX_PIN                          2
-  #endif
+  // -SC- This pin will be used to define FIL_RUNOUT_PIN.
+  // Se comenta la definicion de X_MAX_PIN y se utiliza dicho pin para definir FIL_RUNOUT_PIN.
+  // #ifndef X_MAX_PIN
+  //   #define X_MAX_PIN                          2
+  // #endif
 #endif
 #ifndef Y_STOP_PIN
   #ifndef Y_MIN_PIN
@@ -268,7 +270,7 @@
 
 // RAMPS 1.4 DIO 4 on the servos connector
 #ifndef FIL_RUNOUT_PIN
-  #define FIL_RUNOUT_PIN                       4
+  #define FIL_RUNOUT_PIN                       2 // -SC- Original 4
 #endif
 
 #ifndef PS_ON_PIN

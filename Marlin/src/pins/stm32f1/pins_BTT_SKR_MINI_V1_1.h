@@ -42,11 +42,13 @@
 // Limit Switches
 //
 #define X_MIN_PIN                           PC2
-#define X_MAX_PIN                           PA2
+// #define X_MAX_PIN                           PA2  // -SC- Using this one to detect filament runout 
 #define Y_MIN_PIN                           PC1
 #define Y_MAX_PIN                           PA1
 #define Z_MIN_PIN                           PC0
 #define Z_MAX_PIN                           PC3
+
+#define FIL_RUNOUT_PIN                      PA2 // -SC- Adds filament runout pin
 
 //
 // Steppers

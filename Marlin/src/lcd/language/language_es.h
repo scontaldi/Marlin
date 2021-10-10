@@ -55,6 +55,7 @@ namespace Language_es {
   LSTR MSG_RUN_AUTO_FILES                 = _UxGT("Inicio automático");
   LSTR MSG_DISABLE_STEPPERS               = _UxGT("Apagar motores");
   LSTR MSG_DEBUG_MENU                     = _UxGT("Menú depuración");
+  LSTR MSG_CALIBRATION_MENU               = _UxGT("Calibración"); // -SC- Menu added
   LSTR MSG_PROGRESS_BAR_TEST              = _UxGT("Prob. barra progreso");
   LSTR MSG_HOMING                         = _UxGT("Origen");
   LSTR MSG_AUTO_HOME                      = _UxGT("Llevar al origen");

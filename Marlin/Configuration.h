@@ -50,7 +50,7 @@
 // Cada vez que se hagan cambios agregar la version
 // nuestra "2.0.9.1.1" ; "2.0.9.1.2" ; "2.0.9.1.3" ; ...
 // Donde el primer numero pertenece a la versión de Marlin y el Vx es nuestra version
-#define SHORT_BUILD_VERSION "2.0.9.1 V2"
+#define SHORT_BUILD_VERSION "2.0.9.2"
 
 // **************************** PLACA ***************************
 // Choose the name from boards.h that matches your setup
@@ -1470,7 +1470,7 @@
 #endif 
 
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
-  #define FIL_RUNOUT_PIN PC15
+  #define FIL_RUNOUT_PIN PA2
   #define FIL_RUNOUT_ENABLED_DEFAULT true // Enable the sensor on startup. Override with M412 followed by M500.
   #define NUM_RUNOUT_SENSORS   1          // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
 

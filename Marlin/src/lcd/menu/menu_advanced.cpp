@@ -553,12 +553,13 @@ void menu_advanced_settings() {
 
   #if DISABLED(SLIM_LCD_MENUS)
 
-    #if HAS_M206_COMMAND
+    // -SC- Disabled
+    // #if HAS_M206_COMMAND
       //
       // Set Home Offsets
       //
-      ACTION_ITEM(MSG_SET_HOME_OFFSETS, []{ queue.inject_P(PSTR("M428")); ui.return_to_status(); });
-    #endif
+      // ACTION_ITEM(MSG_SET_HOME_OFFSETS, []{ queue.inject_P(PSTR("M428")); ui.return_to_status(); });
+    // #endif
 
     // M203 / M205 - Feedrate items
     SUBMENU(MSG_VELOCITY, menu_advanced_velocity);
@@ -566,19 +567,20 @@ void menu_advanced_settings() {
     // M201 - Acceleration items
     SUBMENU(MSG_ACCELERATION, menu_advanced_acceleration);
 
-    #if HAS_CLASSIC_JERK
-      // M205 - Max Jerk
-      SUBMENU(MSG_JERK, menu_advanced_jerk);
-    #elif HAS_JUNCTION_DEVIATION
-      EDIT_ITEM(float43, MSG_JUNCTION_DEVIATION, &planner.junction_deviation_mm, 0.001f, 0.3f
-        OPTARG(LIN_ADVANCE, planner.recalculate_max_e_jerk)
-      );
-    #endif
+    // -SC- Disabled
+    // #if HAS_CLASSIC_JERK
+    //   // M205 - Max Jerk
+    //   SUBMENU(MSG_JERK, menu_advanced_jerk);
+    // #elif HAS_JUNCTION_DEVIATION
+    //   EDIT_ITEM(float43, MSG_JUNCTION_DEVIATION, &planner.junction_deviation_mm, 0.001f, 0.3f
+    //     OPTARG(LIN_ADVANCE, planner.recalculate_max_e_jerk)
+    //   );
+    // #endif
 
     // M851 - Z Probe Offsets
-    #if HAS_BED_PROBE
-      if (!is_busy) SUBMENU(MSG_ZPROBE_OFFSETS, menu_probe_offsets);
-    #endif
+    // #if HAS_BED_PROBE
+    //   if (!is_busy) SUBMENU(MSG_ZPROBE_OFFSETS, menu_probe_offsets);
+    // #endif
 
   #endif // !SLIM_LCD_MENUS
 
@@ -606,7 +608,8 @@ void menu_advanced_settings() {
   #endif
 
   #if DISABLED(NO_VOLUMETRICS) || ENABLED(ADVANCED_PAUSE_FEATURE)
-    SUBMENU(MSG_FILAMENT, menu_advanced_filament);
+    // -SC- Disabled
+    // SUBMENU(MSG_FILAMENT, menu_advanced_filament);
   #elif ENABLED(LIN_ADVANCE)
     #if EXTRUDERS == 1
       EDIT_ITEM(float42_52, MSG_ADVANCE_K, &planner.extruder_advance_K[0], 0, 10);
@@ -638,13 +641,14 @@ void menu_advanced_settings() {
     SUBMENU(MSG_PASSWORD_SETTINGS, password.access_menu_password);
   #endif
 
-  #if ENABLED(EEPROM_SETTINGS) && DISABLED(SLIM_LCD_MENUS)
-    CONFIRM_ITEM(MSG_INIT_EEPROM,
-      MSG_BUTTON_INIT, MSG_BUTTON_CANCEL,
-      ui.init_eeprom, nullptr,
-      GET_TEXT(MSG_INIT_EEPROM), (const char *)nullptr, PSTR("?")
-    );
-  #endif
+  // -SC- Disabled
+  // #if ENABLED(EEPROM_SETTINGS) && DISABLED(SLIM_LCD_MENUS)
+  //   CONFIRM_ITEM(MSG_INIT_EEPROM,
+  //     MSG_BUTTON_INIT, MSG_BUTTON_CANCEL,
+  //     ui.init_eeprom, nullptr,
+  //     GET_TEXT(MSG_INIT_EEPROM), (const char *)nullptr, PSTR("?")
+  //   );
+  // #endif
 
   END_MENU();
 }

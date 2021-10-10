@@ -71,6 +71,7 @@ void menu_cancelobject();
 void menu_motion();
 void menu_temperature();
 void menu_configuration();
+void menu_calibration();
 
 #if HAS_POWER_MONITOR
   void menu_power_monitor();
@@ -308,6 +309,7 @@ void menu_main() {
       SUBMENU(MSG_PREHEAT_CUSTOM, menu_preheat_only);
     #endif
 
+    SUBMENU(MSG_CALIBRATION_MENU, menu_calibration);
     SUBMENU(MSG_MOTION, menu_motion);
   }
 
@@ -343,6 +345,7 @@ void menu_main() {
     }
   #endif
 
+ // -SC- Check if need to be removed like in nebula
   #if ENABLED(ADVANCED_PAUSE_FEATURE)
     #if E_STEPPERS == 1 && DISABLED(FILAMENT_LOAD_UNLOAD_GCODES)
       YESNO_ITEM(MSG_FILAMENTCHANGE,
